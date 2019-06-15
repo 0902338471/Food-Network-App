@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,18 +26,16 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements FoodAdapter.ItemClickListener {
     FoodAdapter adapter;
-    ArrayList<myItem> listItems;
+    final static ArrayList<myItem> listItems=new ArrayList<>();
     int positionClick=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listItems=new ArrayList<>();
         RecyclerView myRecyclerView=(RecyclerView)findViewById(R.id.recycle_view);
-        Button addingButton=(Button) findViewById(R.id.adding_button);
+        ImageView addingButton=(ImageView) findViewById(R.id.adding_button);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter=new FoodAdapter(this,listItems);
-
         adapter.setClickListener(this);
         final Context context=this;
         myRecyclerView.setAdapter(adapter);
@@ -44,11 +43,11 @@ public class MainActivity extends AppCompatActivity implements FoodAdapter.ItemC
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(context,ItemViewing.class);
-                i.putExtra("nameFood","Change Name Here");
-                i.putExtra("locationFood","Change Location Here");
-                i.putExtra("checkinFood","Change Lastest Check in Here ");
-                i.putExtra("priceFood","Change Price Here");
-                i.putExtra("phoneFood","Change Phone Number Here");
+                i.putExtra("nameFood","Restaurant name");
+                i.putExtra("locationFood","Address");
+                i.putExtra("checkinFood","Last check-in");
+                i.putExtra("priceFood","Price");
+                i.putExtra("phoneFood","Phone number");
                 i.putExtra("positionClick","NoPosition");
                 startActivityForResult(i,1);
             }

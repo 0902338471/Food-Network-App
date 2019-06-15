@@ -35,6 +35,14 @@ public class myItem implements Serializable {
         price=myItemIn.price;
         Checkin=myItemIn.Checkin;
     }
+    public void set(String checkin,String name,String phone,String price,String location)
+    {
+        this.nameFood=name;
+        this.Checkin=checkin;
+        this.phoneNumber=phone;
+        this.price=price;
+        this.Location=location;
+    }
 //    public void setMyImage(Image in)
 //    {
 //        myImage=in;

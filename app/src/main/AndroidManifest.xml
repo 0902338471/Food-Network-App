@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB-ccRdQ8_ErqfWwQcePo60NMHLLktX0pg"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name=".MapActivity"></activity>
         <activity
             android:name=".ItemUpdating"
             android:label="@string/title_activity_item_updating"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ItemViewing"
             android:label="@string/title_activity_item_viewing"

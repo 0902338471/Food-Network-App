@@ -27,14 +27,13 @@
 
     <ImageView
         android:id="@+id/faded"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="666dp"
+        android:layout_height="757dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/faded_white" />
 
     <android.support.constraint.ConstraintLayout
@@ -51,15 +50,12 @@
             android:layout_width="59dp"
             android:layout_height="52dp"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="37dp"
             android:layout_marginEnd="315dp"
-            android:layout_marginBottom="372dp"
+            android:layout_marginBottom="392dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/res_name" />
 
         <ImageView
@@ -68,25 +64,26 @@
             android:layout_height="52dp"
             android:layout_marginStart="36dp"
             android:layout_marginEnd="316dp"
-            android:layout_marginBottom="292dp"
+            android:layout_marginBottom="308dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/res_location" />
 
         <ImageView
             android:id="@+id/res_checkin"
-            android:layout_width="59dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="195dp"
-            android:layout_marginEnd="316dp"
-            android:layout_marginBottom="142dp"
-            app:layout_constraintBottom_toTopOf="@+id/fab"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="57dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/res_price"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/res_loca"
             app:srcCompat="@drawable/res_lastcheckin" />
 
         <ImageView
@@ -95,9 +92,10 @@
             android:layout_height="52dp"
             android:layout_marginStart="36dp"
             android:layout_marginEnd="316dp"
-            android:layout_marginBottom="133dp"
+            android:layout_marginBottom="148dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/res_price" />
 
@@ -107,9 +105,13 @@
             android:layout_height="52dp"
             android:layout_marginStart="36dp"
             android:layout_marginEnd="315dp"
-            android:layout_marginBottom="55dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/res_phone" />
 
@@ -119,27 +121,27 @@
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="71dp"
-            android:layout_marginBottom="376dp"
+            android:layout_marginBottom="396dp"
             android:gravity="center"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/res_name" />
 
         <EditText
             android:id="@+id/phone"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="71dp"
-            android:layout_marginBottom="56dp"
+            android:layout_width="232dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
             android:gravity="center"
+            android:inputType="number"
             android:textColor="#000000"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/fab" />
+            app:layout_constraintStart_toEndOf="@+id/res_hotline"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
 
         <EditText
             android:id="@+id/price"
@@ -147,12 +149,13 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="71dp"
-            android:layout_marginBottom="136dp"
+            android:layout_marginBottom="152dp"
             android:gravity="center"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/res_price" />
 
         <EditText
@@ -161,12 +164,13 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="71dp"
-            android:layout_marginBottom="216dp"
+            android:layout_marginBottom="228dp"
             android:gravity="center"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/res_checkin" />
 
         <EditText
@@ -175,25 +179,28 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="71dp"
-            android:layout_marginBottom="296dp"
+            android:layout_marginBottom="312dp"
             android:gravity="center"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/res_loca" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="55dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="left|end"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="176dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="1dp"
+            android:background="#40E0D0"
+            android:backgroundTint="#40E0D0"
+            android:src="@drawable/floppy__save__chip__disk"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/phone"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/res_checkin" />
+            app:rippleColor="#40E0D0" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
