@@ -29,7 +29,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         myItem foodItem = listItems.get(position);
         holder.nameFood.setText(foodItem.nameFood);
-        holder.Price.setText(foodItem.price);
+        holder.Location.setText(foodItem.Location);
         holder.PhoneNumber.setText(foodItem.phoneNumber);
     }
 
@@ -40,13 +40,13 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView nameFood;
-        TextView Price;
         TextView PhoneNumber;
+        TextView Location;
         ViewHolder(View itemView) {
             super(itemView);
             nameFood = (TextView)itemView.findViewById(R.id.nameFood);
-            Price=(TextView)itemView.findViewById(R.id.price);
-            PhoneNumber=(TextView)itemView.findViewById(R.id.phoneNumber);
+            Location=(TextView)itemView.findViewById(R.id.locationFood);
+            PhoneNumber=(TextView)itemView.findViewById(R.id.phoneNumberFood);
             itemView.setOnClickListener(this);
         }
 

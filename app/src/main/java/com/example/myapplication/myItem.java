@@ -9,26 +9,31 @@ public class myItem implements Serializable {
 //    Image myImage;
     String nameFood;
     String price;
-//    Location foodLocation;
+    String Checkin;
+    String Location;
     String phoneNumber;
     //friend attribute
     public myItem()//defaultConstructor
     {
         nameFood="Change Food Name Here";
-        price="Change Price Here";
         phoneNumber="Enter Phone Number";
+        Location="Change Location Here";
     }
-    public myItem(String nameFood,String price,String phoneNumber)
+    public myItem(String nameFood,String location,String phoneNumber,String Checkin,String price)
     {
         this.nameFood=nameFood;
-        this.price=price;
         this.phoneNumber=phoneNumber;
+        this.Location=location;
+        this.Checkin=Checkin;
+        this.price=price;
     }
     public myItem(myItem myItemIn)
     {
         nameFood=myItemIn.nameFood;
-        price=myItemIn.price;
+        Location=myItemIn.Location;
         phoneNumber=myItemIn.phoneNumber;
+        price=myItemIn.price;
+        Checkin=myItemIn.Checkin;
     }
 //    public void setMyImage(Image in)
 //    {
